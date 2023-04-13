@@ -1,0 +1,117 @@
+import pandas as pd 
+
+df = pd.read_csv('Salaries.csv') 
+
+df  
+
+type(df) 
+
+df.head() 
+
+#to display first 10 records in mydataset
+df.head(10) 
+
+df.tail() 
+
+#to view bottom 10 records in mydataset
+df.tail(10) 
+
+df.isnull() 
+
+pd.set_option('display.min_rows', None)
+#pd.set_option('display.max_rows', None)
+
+df.isnull() 
+
+#to check for null values
+df.isnull().sum()  
+
+#minimum value in the columns
+df.min() 
+
+#max value in the columns
+df.max() 
+
+df.dtypes  
+
+df.shape 
+
+#to know the names of my columns 
+df.columns 
+
+df.count() 
+
+#basic information on dataset
+df.info()  
+
+df.describe() 
+
+#refer to my column 
+df['salary'] 
+
+#to find out mean of columns
+df['salary'].mean() 
+
+# to find out median of columns
+df['salary'].median() 
+
+#to find out mode of salary column
+df['salary'].mode()  
+
+#to find out variance of columns
+df['salary'].var()   
+
+#to find out std of columns
+df['salary'].std() 
+
+df['salary'].skew() 
+
+df['salary'].kurt() 
+
+#to find the min value
+df['salary'].min() 
+
+# to find the max value
+df['salary'].max()  
+
+# refer to more than 1 column, give two square brackets
+df[['salary','phd']] 
+
+df[['salary','phd']].mean() 
+
+#to get all the rows and all the columns
+df.iloc[:,:] 
+
+df.iloc[0:50,:]  
+
+# to view first 50 records and columns 0 and 1
+df.iloc[0:50,0:3]  
+
+df.iloc[1:50,[1,3,5]] 
+
+#groupby my rank column and calculate avaerage for all the columns
+df.groupby(by ='rank').mean() 
+
+#groupby my rank column and calculate avaerage for only 2 columns 
+df.groupby(by ='rank')[['salary', 'phd']].mean()  
+
+#count no of observations in the rank column
+df['rank'].value_counts()  
+
+#find out max value in the rank column
+df['rank'].max() 
+
+df 
+
+df.loc[2,'salary'] 
+
+df.loc[:, 'salary']     
+
+df.iloc[:,-1] 
+
+
+
+
+
+
+
